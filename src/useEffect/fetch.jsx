@@ -1,17 +1,22 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import axios from "axios";
+import Data from "./fetch-2";
 
-function Listing() {
+const Home = () => {
+  const [data, setData] = useState([]);
+
   useEffect(() => {
-    fetch("")
-      .then((response) => response.json())
-      .then((json) => console.log(json));
+    const fetchData = () => {
+      axios
+        .get("https://jsonplaceholder.typicode.com/posts")
+        .then((response) => setData(response.data))
+        .catch((err) => console.log(err));
+      console.log(data);
+    };
+    fetchData();
   }, []);
-  return ( 
-    <div>
 
+  return <Data data={data} />;
+};
 
-    </div>
-   );
-}
-
-export default Listing;
+export default Home;

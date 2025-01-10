@@ -1,14 +1,15 @@
 import Buttons from "./practical-1/buttons";
 import Output from "./practical-1/output";
+import Home from "./useEffect/fetch";
 import Counter from "./useStates/counter";
 
 function App() {
   return (
     <div>
-      {/* <Counter /> */}
+      <Counter />
       <Output />
       <Buttons />
-      {/* Maher ali mattummal*/}
+      <Home/>
     </div>
   );
 }
