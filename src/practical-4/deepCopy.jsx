@@ -10,5 +10,4 @@ const deepCopy = JSON.parse(JSON.stringify(ogObj));
 deepCopy.name = "Maher";
 console.log(deepCopy.name);
 console.log(ogObj.name);
-console.log(deepCopy);
-console.log(ogObj);
+
