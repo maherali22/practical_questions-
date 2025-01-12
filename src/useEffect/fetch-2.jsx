@@ -1,7 +1,7 @@
 const Data = ({ data }) => {
   return (
     <div>
-      <h1 style={{textAlign:"center" }}>POSTS</h1>
+      <h1 style={{ textAlign: "center" }}>POSTS</h1>
       {data?.map((item) => (
         <ul style={{ listStyle: "none" }} key={item.id}>
           <li style={{ color: "red", textAlign: "center", fontSize: "30px" }}>
